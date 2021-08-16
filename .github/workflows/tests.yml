@@ -15,5 +15,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Test meilisearch
-      run: echo "Hello MeiliSearch Bors"
+    - name: Fail test meilisearch-bors
+      run: exit 1
