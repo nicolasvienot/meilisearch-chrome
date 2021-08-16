@@ -3,18 +3,17 @@ name: Tests
 on:
   pull_request:
   push:
+    # trying and staging branches are for BORS config
+    branches:
+      - trying
+      - staging
+      - main
 
 jobs:
   tests:
-    name: build-image-test
+    name: test-meilisearch-bors
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Set up Python 3.7
-      uses: actions/setup-python@v1
-      with:
-        python-version: 3.7
-    - name: Set image name as env variable
-      run: echo "IMAGE_NAME=meilisearch_digitalocean_ci_test_$(date +'%d-%m-%Y-%H-%M-%S')" >> $GITHUB_ENV
-    - name: Test variable
-      run: echo $IMAGE_NAME
+    - name: Fail test meilisearch-bors
+      run: echo "Hello MeiliSearch Bors"

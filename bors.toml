@@ -1,0 +1,4 @@
+status = ["test-meilisearch-bors"]
+
+# 1 hour timeout
+timeout-sec = 3600
