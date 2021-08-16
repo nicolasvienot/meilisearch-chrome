@@ -16,4 +16,4 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Fail test meilisearch-bors
-      run: exit 1
+      run: echo "Hello MeiliSearch Bors"
