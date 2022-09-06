@@ -1,1 +1,3 @@
 # meilisearch-chrome
+
+test
